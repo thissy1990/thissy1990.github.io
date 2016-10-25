@@ -7,6 +7,11 @@
 		</div>
 		
 		<div id="div_Menu">
+			<ul>
+				<li>Home</li>
+				<li>Sobre</li>
+				<li>Contato</li>
+			</ul>
 		</div>
 		
 		<div id="div_Cont">
