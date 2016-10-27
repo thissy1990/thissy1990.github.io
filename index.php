@@ -8,9 +8,9 @@
 		
 		<div id="div_Menu">
 			<ul>
-				<li>Home</li>
-				<li>Sobre</li>
-				<li>Contato</li>
+				<li> <a href="?index">Home</a></li>
+				<li> <a  href="?sobre">Sobre</a></li>
+				<li> <a  href="?contato">Contato</a></li>
 			</ul>
 		</div>
 		
