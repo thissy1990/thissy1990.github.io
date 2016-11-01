@@ -5,15 +5,16 @@
 	$user = "root";
 	$pass = "";
 	$mysqli = new mysqli($host, $user, $pass, $data);
-	if ($mysqli->connect_error) {
+	if ($mysqli->connect_error || !$mysqli->set_charset("utf8")) {
 		printf("ERRO MySQLi: %s\n", $mysqli->connect_error);
 		exit();
 	}
-	if (!$mysqli->set_charset("utf8")) {
-      printf("Error loading character set utf8: %s\n", $mysqli->error);
-  } else {
-      printf("Current character set: %s\n", $mysqli->character_set_name());
-  }
+    //if (!$mysqli->set_charset("utf8")) {
+    //  printf("Error loading character set utf8: %s\n", $mysqli->error);
+    //} 
+    //else 
+    //      printf("Current character set: %s\n", $mysqli->character_set_name());
+  
 ?>
 <html>
 	<head>
@@ -51,20 +52,20 @@
 						    $texto   = $array['texto'];
 						    $autor   = $array['autor'];
 						    $data    = $array['data'];
-				            echo '  <div id="div_Post">
-                                        <h1>
-                                            <b>Título:</b>'.$titulo.'<br />
-                                            <b>Data:</b>'.$data.'
-                                        </h1>
-                                        <span>
-                                            <b>Autor:</b>'.$autor.'
-                                        </span> 
-                                        <p>'.$texto.'</p> 
-                                    </div>';
+				            echo '
+                                <div id="div_Post">
+                                    <span id="span_Titulo">'.$titulo.'</span><br><br>
+                                    <span id="span_Texto">'.$texto.'</span><br><br>
+                                    <span id="span_Desc">'.$autor.' / '.$data.'</span>
+                                </div>';
 						    }
 					}
 				?>	
 		</div>
+
+        <div id="div_Anun">
+            <p>Anúncio</p>
+        </div>
 		
 		<a id="a" href="index.php?home">
 		<div id="div_Roda">
