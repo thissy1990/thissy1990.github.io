@@ -1,8 +1,151 @@
+﻿@charset "utf-8";
+
+/* ########## PADRÃO ########## */
 * {
-	padding: 0px;
-	margin: 0px;
+    padding: 0px;
+    margin: 0px;
+    color: #FFFFFF;
 }
+
+/* ########## CORPO ########## */
 body {
-	height: auto;
-	width: 900px;
+    background: #A63232;
+    font-family: Arial;
+}
+
+/* ########## CONTAINER ########## */
+#div_Container {
+    background: #190000;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 900px;
+    height: auto;
+}
+
+/* ########## CABEÇALHO ########## */
+#div_Cabe {
+    background-color: #9E0000;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-align: center;
+    margin: 10px 40px;
+    padding: 30px 20px 30px 20px;
+}
+
+    #div_Cabe:hover {
+        background-color: #700000;
+    }
+
+#a {
+    text-decoration: none;
+}
+
+/* ########## MENU ########## */
+#div_Menu {
+    margin: 5px auto;
+    text-align: center;
+}
+
+    #div_Menu li {
+        list-style-type: none;
+        display: inline;
+    }
+
+/* ########## CONTEÚDO ########## */
+#div_Cont {
+    margin: 10px 40px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #9E0000;
+    padding: 10px;
+}
+
+/* ########## POSTAGENS ########## */
+#div_Post {
+    margin: 0px 0px 10px 0px;
+    border: 5px solid #190000;
+    background-color: #900000;
+    border-radius: 4px;
+    padding: 10px 20px 10px 20px;
+}
+
+    #div_Post:hover {
+        background-color: #700000;
+    }
+    
+/* ########## RODAPÉ ########## */
+#div_Roda {
+    margin: 10px 40px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #9E0000;
+    text-align: center;
+    padding: 10px 10px 10px 20px;
+}
+
+    #div_Roda:hover {
+        background-color: #700000;
+    }
+    
+/* ########## BOTÃO ########## */
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #9E0000;
+    border: 1px solid black;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 270px;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 2px 0px 2px 0px;
+}
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.3s;
+    }
+
+        .button span:after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0s;
+        }
+
+    .button:hover {
+        background-color: #700000;
+    }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+
+    .button:active {
+        background: #880022;
+        box-shadow: 0 2px #FFFFFF;
+        transform: translateY(5px);
+    }
+    
+/* ########## NÃO SELECIONÁVEL ########## */
+.nSel {
+    -webkit-touch-callout: none; /* iPhone OS, Safari */
+    -webkit-user-select: none; /* Chrome, Safari 3 */
+    -khtml-user-select: none; /* Safari 2 */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    user-select: none; /* Possível implementação no futuro */
+    cursor: default;
 }
